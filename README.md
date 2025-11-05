@@ -41,8 +41,8 @@ batch.size=16384                          # 16KB
 buffer.memory=33554432                    # 32MB
 
 # Fiabilité
-acks=1                                    # Leader seul (all si idempotence activée)
-enable.idempotence=false
+acks=all                                    # Leader seul (all si idempotence activée)
+enable.idempotence=true
 retries=2147483647                        # Retry infini
 max.in.flight.requests.per.connection=5
 
@@ -1472,3 +1472,4 @@ public class ProductionKafkaConsumer {
 **Version :** 2.0 - Développeurs  
 **Dernière mise à jour :** Novembre 2025  
 **Basé sur :** Apache Kafka 3.9 / 4.0
+
